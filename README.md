@@ -1,7 +1,7 @@
 import { Selector } from 'testcafe';
 
 fixture`Login Test`
-    .page`https://your-application-url.com/login`; // Replace with your actual login page URL
+    .page`https://dtthon.deepthought.education/login?share_redirect=true&url=/dtthon/applicant/dashboard`; // Replace with your actual login page URL
 
 test('Login with valid credentials', async t => {
     // Selectors for login form elements
@@ -27,7 +27,7 @@ test('Login with valid credentials', async t => {
 
 test('Login with invalid credentials', async t => {
     // Selectors for login form elements
-    const usernameInput = Selector('#username');
+    const usernameInput = Selector('#username/email');
     const passwordInput = Selector('#password');
     const loginButton = Selector('button[type="submit"]');
 
